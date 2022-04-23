@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import MyContextProvider from "./context/MyContext";
-
-const app =(
-  <MyContextProvider>
-    <App/>
-  </MyContextProvider>
-
-) 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { BrowserRouter } from "react-router-dom";
 
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(app)
+const root  = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);  
